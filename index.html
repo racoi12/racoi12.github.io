@@ -101,6 +101,11 @@
     </div>
     
     <!-- Reproductor de Música -->
+  <div class="container">
+        <div class="card"><a href="http://localhost:8080/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Music_Note.svg" alt="Servidor de Música"></a><a href="http://localhost:8080/" target="_blank">Servidor de Música</a></div>
+    </div>
+    
+    <!-- Reproductor de Música -->
     <div class="music-player">
         <h2>Reproductor de Música</h2>
         <audio id="audioPlayer" controls></audio>
@@ -111,5 +116,39 @@
     <footer>
         <p>&copy; 2025 Canela Devs. ¡Sigue aprendiendo y divirtiéndote!</p>
     </footer>
+    <script>
+        async function loadSongs() {
+            try {
+                const response = await fetch('http://localhost:8080/');
+                const text = await response.text();
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+                const links = Array.from(doc.querySelectorAll('a'));
+                
+                const songList = document.getElementById('songList');
+                songList.innerHTML = '';
+                
+                links.forEach(link => {
+                    const songName = link.textContent;
+                    if (songName.endsWith('.mp3') || songName.endsWith('.wav') || songName.endsWith('.ogg')) {
+                        const li = document.createElement('li');
+                        li.textContent = songName;
+                        li.onclick = () => playSong(`http://localhost:8080/${songName}`);
+                        songList.appendChild(li);
+                    }
+                });
+            } catch (error) {
+                console.error('Error cargando canciones:', error);
+            }
+        }
+        
+        function playSong(songPath) {
+            const audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.src = songPath;
+            audioPlayer.play();
+        }
+        
+        window.onload = loadSongs;
+    </script>
 </body>
 </html>
