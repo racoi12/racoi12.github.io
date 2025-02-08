@@ -1,154 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zona Educativa Divertida</title>
-    <style>
-        body {
-            font-family: 'Comic Sans MS', sans-serif;
-            background-color: #f0f8ff;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            width: 100%;
-            padding: 20px;
-            color: white;
-        }
-        header h1 {
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-        .card {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 15px;
-            width: 200px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .card:hover {
-            transform: scale(1.1);
-        }
-        .card img {
-            max-width: 100px;
-            border-radius: 50%;
-        }
-        .card a {
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-        }
-        .music-player {
-            margin: 20px;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        .song-list {
-            list-style: none;
-            padding: 0;
-        }
-        .song-list li {
-            cursor: pointer;
-            color: #4CAF50;
-            font-weight: bold;
-            margin: 5px 0;
-        }
-        footer {
-            margin-top: auto;
-            padding: 20px;
-            background-color: #4CAF50;
-            color: white;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zona Educativa Divertida</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background-color: #f0f8ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #333;
+    }
+    header {
+      background-color: #4CAF50;
+      width: 100%;
+      padding: 20px;
+      color: white;
+    }
+    header h1 {
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      width: 200px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.1);
+    }
+    .card img {
+      max-width: 100px;
+      border-radius: 50%;
+    }
+    .card a {
+      text-decoration: none;
+      color: #4CAF50;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    .music-player {
+      margin: 20px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .song-list {
+      list-style: none;
+      padding: 0;
+    }
+    .song-list li {
+      cursor: pointer;
+      color: #4CAF50;
+      font-weight: bold;
+      margin: 5px 0;
+    }
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>¡Bienvenidos a la Zona Educativa Divertida!</h1>
-    </header>
-    <div class="container">
-        <div class="card"><a href="https://www.khanacademy.org" target="_blank"><img src="https://cdn.kastatic.org/images/khan-logo-vertical-transparent.png" alt="Khan Academy"></a><a href="https://www.khanacademy.org" target="_blank">Khan Academy</a></div>
-        <div class="card"><a href="https://www.duolingo.com" target="_blank"><img src="https://design.duolingo.com/86230c9ad10d9f08b785.svg" alt="Duolingo"></a><a href="https://www.duolingo.com" target="_blank">Duolingo</a></div>
-        <div class="card"><a href="https://kids.nationalgeographic.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Natgeo_Kids_logo.svg" alt="Nat Geo Kids"></a><a href="https://kids.nationalgeographic.com" target="_blank">Nat Geo Kids</a></div>
-        <div class="card"><a href="https://pbskids.org" target="_blank"><img src="https://cms-tc.pbskids.org/globalresources/resources/img/pbs-kids-logo.svg" alt="PBS Kids"></a><a href="https://pbskids.org" target="_blank">PBS Kids</a></div>
-        <div class="card"><a href="https://code.org" target="_blank"><img src="https://code.org/images/logo.png" alt="Code.org"></a><a href="https://code.org" target="_blank">Code.org</a></div>
-        <div class="card"><a href="https://totale.rosettastone.com" target="_blank"><img src="https://1000marcas.net/wp-content/uploads/2021/05/Rosetta-Stone-Logo.png" alt="Rosetta Stone"></a><a href="https://totale.rosettastone.com" target="_blank">Rosetta Stone</a></div>
-        <div class="card"><a href="https://nuevaescuelamexicana.sep.gob.mx/niveles/2/grados/7/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/SEP_Logo_2019.svg" alt="SEP"></a><a href="https://nuevaescuelamexicana.sep.gob.mx/niveles/2/grados/7/" target="_blank">SEP 6O GRADO</a></div>
-        <div class="card"><a href="http://10.147.17.4:5173/" target="_blank"><img src="https://via.placeholder.com/100" alt="Agente Capuchino"></a><a href="http://10.147.17.4:5173/" target="_blank">Agente Capuchino</a></div>
-        <div class="card"><a href="https://telesecundaria.sep.gob.mx/?utm_source=chatgpt.com#/home" target="_blank"><img src="https://seeklogo.com/images/T/telesecundaria-logo-D187329D7F-seeklogo.com.png" alt="Telesecundaria"></a><a href="https://telesecundaria.sep.gob.mx/?utm_source=chatgpt.com#/home" target="_blank">Telesecundaria</a></div>
-        <div class="card"><a href="https://teams.live.com/v2/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" alt="Teams"></a><a href="https://teams.live.com/v2/" target="_blank">Teams</a></div>
-        <div class="card"><a href="http://localhost:8080/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Music_Note.svg" alt="Servidor de Música"></a><a href="http://localhost:8080/" target="_blank">Servidor de Música</a></div>
-    </div>
-    
-    <!-- Reproductor de Música -->
+  <header>
+    <h1>¡Bienvenidos a la Zona Educativa Divertida!</h1>
+  </header>
+  
   <div class="container">
-        <div class="card"><a href="http://localhost:8080/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Music_Note.svg" alt="Servidor de Música"></a><a href="http://localhost:8080/" target="_blank">Servidor de Música</a></div>
+    <div class="card">
+      <a href="https://www.khanacademy.org" target="_blank">
+        <img src="https://cdn.kastatic.org/images/khan-logo-vertical-transparent.png" alt="Khan Academy">
+      </a>
+      <a href="https://www.khanacademy.org" target="_blank">Khan Academy</a>
     </div>
-    
-    <!-- Reproductor de Música -->
-    <div class="music-player">
-        <h2>Reproductor de Música</h2>
-        <audio id="audioPlayer" controls></audio>
-        <h3>Selecciona una canción:</h3>
-        <ul class="song-list" id="songList"></ul>
+    <div class="card">
+      <a href="https://www.duolingo.com" target="_blank">
+        <img src="https://design.duolingo.com/86230c9ad10d9f08b785.svg" alt="Duolingo">
+      </a>
+      <a href="https://www.duolingo.com" target="_blank">Duolingo</a>
     </div>
+    <div class="card">
+      <a href="https://kids.nationalgeographic.com" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/54/Natgeo_Kids_logo.svg" alt="Nat Geo Kids">
+      </a>
+      <a href="https://kids.nationalgeographic.com" target="_blank">Nat Geo Kids</a>
+    </div>
+    <div class="card">
+      <a href="https://pbskids.org" target="_blank">
+        <img src="https://cms-tc.pbskids.org/globalresources/resources/img/pbs-kids-logo.svg" alt="PBS Kids">
+      </a>
+      <a href="https://pbskids.org" target="_blank">PBS Kids</a>
+    </div>
+    <div class="card">
+      <a href="https://code.org" target="_blank">
+        <img src="https://code.org/images/logo.png" alt="Code.org">
+      </a>
+      <a href="https://code.org" target="_blank">Code.org</a>
+    </div>
+    <div class="card">
+      <a href="https://totale.rosettastone.com" target="_blank">
+        <img src="https://1000marcas.net/wp-content/uploads/2021/05/Rosetta-Stone-Logo.png" alt="Rosetta Stone">
+      </a>
+      <a href="https://totale.rosettastone.com" target="_blank">Rosetta Stone</a>
+    </div>
+    <div class="card">
+      <a href="https://nuevaescuelamexicana.sep.gob.mx/niveles/2/grados/7/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/SEP_Logo_2019.svg" alt="SEP">
+      </a>
+      <a href="https://nuevaescuelamexicana.sep.gob.mx/niveles/2/grados/7/" target="_blank">SEP 6O GRADO</a>
+    </div>
+    <div class="card">
+      <a href="http://10.147.17.4:5173/" target="_blank">
+        <img src="https://via.placeholder.com/100" alt="Agente Capuchino">
+      </a>
+      <a href="http://10.147.17.4:5173/" target="_blank">Agente Capuchino</a>
+    </div>
+    <div class="card">
+      <a href="https://telesecundaria.sep.gob.mx/?utm_source=chatgpt.com#/home" target="_blank">
+        <img src="https://seeklogo.com/images/T/telesecundaria-logo-D187329D7F-seeklogo.com.png" alt="Telesecundaria">
+      </a>
+      <a href="https://telesecundaria.sep.gob.mx/?utm_source=chatgpt.com#/home" target="_blank">Telesecundaria</a>
+    </div>
+    <div class="card">
+      <a href="https://teams.live.com/v2/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg" alt="Teams">
+      </a>
+      <a href="https://teams.live.com/v2/" target="_blank">Teams</a>
+    </div>
+    <div class="card">
+      <a href="http://localhost:8080/" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Music_Note.svg" alt="Servidor de Música">
+      </a>
+      <a href="http://localhost:8080/" target="_blank">Servidor de Música</a>
+    </div>
+  </div>
+  
+  <!-- Reproductor de Música -->
+  <div class="music-player">
+    <h2>Reproductor de Música</h2>
+    <audio id="audioPlayer" controls></audio>
+    <h3>Selecciona una canción:</h3>
+    <ul class="song-list" id="songList"></ul>
+  </div>
+  
+  <footer>
+    <p>&copy; 2025 Canela Devs. ¡Sigue aprendiendo y divirtiéndote!</p>
+  </footer>
+  
+  <script>
+    async function loadSongs() {
+      try {
+        // Se obtiene la lista de canciones desde el endpoint /songs en formato JSON
+        const response = await fetch('http://localhost:8080/songs');
+        const songs = await response.json();
+        
+        const songList = document.getElementById('songList');
+        songList.innerHTML = '';
+        
+        songs.forEach(song => {
+          const li = document.createElement('li');
+          li.textContent = song;
+          li.onclick = () => playSong(`http://localhost:8080/${song}`);
+          songList.appendChild(li);
+        });
+      } catch (error) {
+        console.error('Error cargando canciones:', error);
+      }
+    }
     
-    <footer>
-        <p>&copy; 2025 Canela Devs. ¡Sigue aprendiendo y divirtiéndote!</p>
-    </footer>
-    <script>
-        async function loadSongs() {
-            try {
-                const response = await fetch('http://localhost:8080/');
-                const text = await response.text();
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, 'text/html');
-                const links = Array.from(doc.querySelectorAll('a'));
-                
-                const songList = document.getElementById('songList');
-                songList.innerHTML = '';
-                
-                links.forEach(link => {
-                    const songName = link.textContent;
-                    if (songName.endsWith('.mp3') || songName.endsWith('.wav') || songName.endsWith('.ogg')) {
-                        const li = document.createElement('li');
-                        li.textContent = songName;
-                        li.onclick = () => playSong(`http://localhost:8080/${songName}`);
-                        songList.appendChild(li);
-                    }
-                });
-            } catch (error) {
-                console.error('Error cargando canciones:', error);
-            }
-        }
-        
-        function playSong(songPath) {
-            const audioPlayer = document.getElementById('audioPlayer');
-            audioPlayer.src = songPath;
-            audioPlayer.play();
-        }
-        
-        window.onload = loadSongs;
-    </script>
+    function playSong(songPath) {
+      const audioPlayer = document.getElementById('audioPlayer');
+      audioPlayer.src = songPath;
+      audioPlayer.play();
+    }
+    
+    window.onload = loadSongs;
+  </script>
 </body>
 </html>
